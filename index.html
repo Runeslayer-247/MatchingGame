@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matching game</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="logic.js" async></script>
+	<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="page-title">Reunite the tribe with their spiritual animals <br>
+    Will you have what it takes ? </h1>
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text ">
+        GAME OVER
+        <span class="overlay-text-small">Click to restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text ">
+        VICTORY
+        <span class="overlay-text-small">Click to restart</span>
+    </div>
+
+
+    <div class="game-container">
+    	<div class="game-info-container">
+    		<div class="game-info">
+    			Time <span id="time-remaining">100</span>
+    		</div>
+    		<div class="game-info">
+    			Flips <span id="flips">0</span>
+    		</div>
+    	</div>
+
+    	<div class="card">
+    		<div class="card-back card-face">
+    			<img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+    			<img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+    			<img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+    			<img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+    			<img class="mask" src="assets/mask.png">
+    		</div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/bear.png">
+            </div>
+        </div>
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/bear.png">
+            </div>
+        </div>
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/boar.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/boar.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/deer.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/deer.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/owl.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/owl.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/racoon.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/racoon.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/skull.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/skull.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/squirrel.png">
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/squirrel.png">
+            </div>
+        </div>
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/fox.png">
+            </div>
+        </div>
+                <div class="card">
+            <div class="card-back card-face">
+                <img class="tribal-band tribal-band-top-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-top-right" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-left" src="Assets/tribals.png">
+                <img class="tribal-band tribal-band-bottom-right" src="Assets/tribals.png">
+                <img class="mask" src="assets/mask.png">
+            </div>
+                        <div class="card-front card-face">
+                <img class="tribal-band star-band-top-left" src="Assets/star.png">
+                <img class="tribal-band star-band-top-right" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-left" src="Assets/star.png">
+                <img class="tribal-band star-band-bottom-right" src="Assets/star.png">
+                <img class="card-value" src="assets/fox.png">
+            </div>
+        </div>
+                
+            </div>
+        </div>
+        
+
+    </div>
+
+
+
+</body>
+</html>
